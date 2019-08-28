@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap');
+
+* { box-sizing: border-box; }
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* =============================================================================
+                                Typography
+============================================================================= */
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+h1 { font-size: 2.5rem;  }
+h2 { font-size: 2rem;    }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem;  }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem;    }
+
+
+/* ===========================
+           p
+=========================== */
+
+
+p {
+  margin-top: 0;
+  margin-bottom: 25px;
+  line-height: 1.75;
+}
+
+p:last-child { margin-bottom: 0; }
+
+.fancy-h1 {
+  margin: 0;
+  padding: 50px 0;
+  color: snow;
+  text-align: center;
+  font-size: 40px;
+  font-family: Montserrat;
+  letter-spacing: 3px;
+  line-height: 1.25;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #61DAFB;
+  text-shadow: -3px 3px 6px rgba(0,0,0,0.15);
+}
+
+.fancy-h2 {
+  margin: 0;
+  padding: 50px 0px 25px 0;
+  color: snow;
+  font-size: 40px;
+  font-family: Montserrat;
+  text-align: center;
+  letter-spacing: 1px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: violet;
+  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+}
+
+.fancy-h3 {
+  margin: 0;
+  padding: 0 0 15px 0;
+  color: snow;
+  font-size: 32px;
+  font-family: Montserrat;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #61DAFB;
+  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+}
+
+
+/* =============================================================================
+                                <header>
+============================================================================= */
+
+
+header {
+  position: relative;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px 25px;
+  color: white;
+  text-align: center;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #333 url("../images/header-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+header p { padding: 0 50px; }
+
+.read-more-link {
+  display: inline-block;
+  margin: 50px 0;
+  padding: 10px 20px;
+  color: violet;
+  text-decoration: none;
+  background: #333;
+  border: 1px solid violet;
+  transition: all 0.15s linear;
+}
+
+.read-more-link:hover {
+  color: white;
+  background: violet;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+
+/* =============================================================================
+                               Section 1
+============================================================================= */
+
+
+#section-1 {
+  color: #333;
+  background: #eaeaea;
+}
+
+#section-1 .grid-item { padding: 0px 5% 25px 5%; }
+
+
+/* =============================================================================
+                               Section 2
+============================================================================= */
+
+
+#section-2 {
+  background: linear-gradient(135deg, #e66465, #9198e5);
+  /* padding inside of #section-2 has been set to a static value here
+  to match margin-bottom on each .card below.
+  Then at widths above 760px it will also match the the grid-column-gap value
+  applied between cards. */
+  padding: 25px;
+}
+
+.card {
+  margin: 0 0 25px 0;
+  color: #333;
+  background: snow;
+  border: 1px solid #61DAFB;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:last-of-type { margin-bottom: 0; }
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 0.5px solid rgba(0,0,0,0.75);
+}
+
+.card-content { padding: 25px; }
+
+.card-title { text-align: center; }
+
+
+/* =============================================================================
+                               Section 3
+============================================================================= */
+
+
+#section-3 {
+  color: #333;
+  background: white;
+}
+
+#section-3 .grid-item { padding: 0px 5% 25px 5%; }
+
+
+/* =============================================================================
+                               Section 4
+============================================================================= */
+
+
+#section-4 .grid-item {
+  color: white;
+  padding: 0 5% 25px 5%;
+}
+
+#section-4 .grid-item:nth-of-type(1) { background: #61DAFB; }
+
+#section-4 .grid-item:nth-of-type(1) h4 {
+  color: violet;
+  text-align: center;
+  font-family: Montserrat;
+  letter-spacing: 2px;
+  text-shadow: -2px 2px 4px rgba(0,0,0,0.15);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(0,0,0,0.25);
+}
+
+
+/* =============================================================================
+                                Footer
+============================================================================= */
+
+
+footer {
+  padding: 25px 5%;
+  color: #61DAFB;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  text-shadow: -1px 1px 2px rgba(0,0,0,0.15);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: rgba(0,0,0,0.25);
+  background: #eaeaea;
+  border-top: 0.5px solid rgba(0,0,0,0.5);
+}
+
+
+/* =============================================================================
+                                Media Queries
+============================================================================= */
+
+
+@media (min-width: 760px) {
+  .fancy-h1 { font-size: 64px; }
+
+  .fancy-h3 { font-size: 3vw; }
+
+
+  /* In this project, every grid container has 12 columns.
+  This is used on header, #section-1, #section-2, #section-3, #section-4, and footer.
+  Below 760px the containers DO NOT have display: grid.
+  Consequently, all .grid-item elements stack. */
+  header, #section-1, #section-2, #section-3, #section-4, footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+
+  /* ========================
+        header
+  ======================== */
+
+
+  header { padding: 50px 0px; }
+
+  /* grid-column: 4/10; pushes the header content into the middle two columns (horizontally).
+  I have used this here as an example of how one could use the grid lines to space content.
+  When using this approach, the spacing is always going to be a 'relative unit'.
+  Of course, one could use a percentage-based value for the padding as well.
+  I have done this for sections 1, 3, and 4 */
+  header .grid-item { grid-column: 4/10; }
+
+  header p { padding: 0; }
+
+
+  /* ========================
+        #section-1
+  ======================== */
+
+
+  #section-1 { }
+
+  #section-1 .grid-item { grid-column: span 12; } /* Or use: grid-column: 1/13; */
+
+  #section-1 .content-text {
+    margin: 0;
+    padding: 0;
+    columns: 2; /* What does this do? */
+  }
+
+  #section-1 .content-text p {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  /* ========================
+        #section-2
+  ======================== */
+
+
+  #section-2 { grid-column-gap: 25px; }
+
+  /* In this section .grid-item is also .card */
+  #section-2 .grid-item { margin: 0; }
+  #section-2 .grid-item:nth-of-type(1){ grid-column: 1/5; }
+  #section-2 .grid-item:nth-of-type(2){ grid-column: 5/9; }
+  #section-2 .grid-item:nth-of-type(3){ grid-column: 9/13; }
+
+
+  /* ========================
+        #section-3
+  ======================== */
+
+
+  #section-3 { }
+
+  #section-3 .grid-item { grid-column: span 12; }
+
+
+  /* ========================
+        #section-4
+  ======================== */
+
+
+  #section-4 { }
+
+  #section-4 .grid-item { grid-column: span 6; }
+
+
+  /* ========================
+            footer
+  ======================== */
+
+
+  footer { padding: 0; }
+
+  footer .grid-item {
+    grid-column: span 6;
+    padding: 25px 5%;
+  }
+}
